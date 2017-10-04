@@ -24,7 +24,9 @@ export class ArticleComponent implements OnInit {
     return false;
   }
 
-
+  domain():string {
+    return this.article.domain();     
+  }
 
   ngOnInit() {
   }

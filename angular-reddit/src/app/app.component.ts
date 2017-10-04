@@ -11,9 +11,9 @@ export class AppComponent {
 
   constructor(){
     this.articles=[
-      new Article("primer articulo", "primer link"),
-      new Article("segundo articulo", "segundo link"),
-      new Article("tercer articulo", "tercer link"),
+      new Article("primer articulo", "http://primer link"),
+      new Article("segundo articulo", "http://segundo link"),
+      new Article("tercer articulo", "http://tercer link"),
     ];
   }
 
@@ -21,6 +21,9 @@ export class AppComponent {
     console.log(`Adding article title: ${title.value} and link: ${link.value}`);
     console.log("Adding article title: "+title.value+ " and link: " +link.value);
 
+    this.articles.push(new Article(title.value,link.value,0));
+    title.value="";
+    link.value="";
     return false;
   }
 

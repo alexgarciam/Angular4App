@@ -18,7 +18,7 @@ export class Article {
         this.votes -= 1;
     }
 
-      domain(): string {
+    domain(): string {
 
     try {
       // e.g. http://foo.com/path/to/bar
@@ -28,5 +28,5 @@ export class Article {
     } catch (err) {
       return null;
     }
-  }
+  } 
 }
